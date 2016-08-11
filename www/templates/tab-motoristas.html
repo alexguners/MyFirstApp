@@ -1,0 +1,19 @@
+<ion-view view-title="Motoristas">
+    <ion-nav-buttons side="right">
+        <div class="buttons">
+            <button class="button button-icon icon ion-ios-minus-outline"
+              ng-click="data.showDelete = !data.showDelete;"></button>
+        </div>
+    </ion-nav-buttons>
+
+
+    <ion-content>
+        <h1>Lista de Motoristas</h1>
+        <ion-list show-delete="data.showDelete">
+        	<ion-item ng-repeat="list in lists">
+        		{{list.title}}
+               <ion-delete-button class="ion-minus-circled"></ion-delete-button>
+        	</ion-item>
+    	</ion-list>
+    </ion-content>
+</ion-view>

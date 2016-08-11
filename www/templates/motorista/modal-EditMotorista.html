@@ -1,0 +1,26 @@
+<ion-modal-view>
+<ion-header-bar class="bar bar-header bar-positive">
+	<h1 class="title">Editar Motorista</h1>
+	<button class="button button-clear button-primary" ng-click="modal.hide()">Cancelar</button>
+</ion-header-bar>
+<ion-content class="padding">
+	<h1>Informações</h1>
+	<form >
+    <input type="hidden" name="id" ng-model="motorista.id" />
+		<label class="item item-input">
+			<input type="text" name="name" placeHolder="Nome" ng-model="motorista.name" required="required"/>
+		</label>
+		<label class="item item-input">
+			<input type="text" required  placeHolder="Naturalidade" ng-model="motorista.naturalidade" />
+		</label>
+		<label class="item item-input">
+			<input type="text" required  placeHolder="Endereço" ng-model="motorista.endereco" />
+		</label>
+		<div class="padding" >
+			<button class="button button-positive button-block" ng-click="editMotorista(motorista)">
+				Salvar
+			</button>
+		</div>
+	</form>
+</ion-content>
+</ion-modal-view>

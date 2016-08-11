@@ -1,0 +1,20 @@
+<ion-view view-title="Adicionar Motorista">
+	<ion-content>
+		<form ng-submit="addMotorista(motorista)">
+			<label class="item item-input">
+				<input type="text" name="name" placeHolder="Nome" ng-model="motorista.name" required="required"/>
+			</label>
+			<label class="item item-input">
+				<input type="text" required name="naturalidade" placeHolder="Naturalidade" ng-model="motorista.naturalidade" />
+			</label>
+			<label class="item item-input">
+				<input type="text" required name="endereco" placeHolder="Endereço" ng-model="motorista.endereco" />
+			</label>
+			<div class="padding" >
+				<button class="button button-positive button-block" type="submmit">
+	  				Adicionar
+				</button>
+			</div>
+		</form>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,21 @@
+<ion-view view-title="Motoristas" cache-view="false">
+    <ion-nav-buttons side="right">
+        <div class="buttons">
+            <button class="button button-icon icon ion-ios-minus-outline"
+              ng-click="data.showDelete = !data.showDelete;"></button>
+        </div>
+    </ion-nav-buttons>
+
+
+    <ion-content data-ng-init="listMotoristas()">
+        <ion-refresher on-refresh="listMotoristas()"></ion-refresher>
+        <h1>Lista de Motoristas</h1>
+        <ion-list show-delete="data.showDelete">
+        	<ion-item ng-repeat="motorista in motoristas">
+        		{{motorista.name}}<ion-option-button class="button-assertive" ng-click="openModal({{motorista}})">      Editar
+                </ion-option-button>
+               <ion-delete-button class="ion-minus-circled" ng-click="deleteMotorista({{motorista}})"></ion-delete-button>
+        	</ion-item>
+    	</ion-list>
+    </ion-content>
+</ion-view>
